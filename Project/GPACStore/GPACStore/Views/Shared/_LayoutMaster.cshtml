@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+
+    <!-- #region Styles -->
+
+
+    <link href="~/lib/vendor/swiper/swiper.min.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700">
+    <!-- Swiper slider-->
+    <link rel="stylesheet" href="~/lib/vendor/swiper/swiper-bundle.min.css">
+    <!-- Choices.js [Custom select]-->
+    <link rel="stylesheet" href="~/lib/vendor/choices.js/public/~/lib/styles/choices.css">
+    <!-- Theme stylesheet-->
+    <link rel="stylesheet" href="~/lib/css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="~/lib/css/custom.css">
+    <!-- Favicon and apple touch icons-->
+    <!--materialize-->
+    <link rel="stylesheet" href="~/lib/materialize/css/materialize.min.css">
+
+    <!-- #endregion -->
+    <!-- Cart -->
+    <script>document.getElementsByTagName("html")[0].className += " js";</script>
+    <link rel="stylesheet" href="~/lib/cart/css/style.css">
+
+</head>
+<body>
+
+
+    <script src="~/lib/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/lib/materialize/js/materialize.min.js"></script>
+
+    <div class="wide" id="all">
+
+        <!-- Top bar-->
+        <div class="top-bar py-2" id="topBar" style="background: #282882">
+            <div class="container px-lg-0 text-light py-1">
+                <div class="row d-flex align-items-center">
+                    <div class="col-md-6 d-md-block d-none">
+                        <p class="mb-0 text-xs">Contact us on 777 555 333 or hello@gpac.com.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex justify-content-md-end justify-content-between">
+                            <ul class="list-inline d-block d-md-none mb-0">
+                                <li class="list-inline-item">
+                                    <a class="text-xs" href="#"><i class="fa fa-phone"></i></a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-xs" href="#">
+                                        <i class="fa fa-envelope"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-inline mb-0">
+
+                                <!-- Translate -->
+                                <li class="list-inline-item">
+
+                                    <div id="google_translate_element"></div>
+
+                                    <script type="text/javascript">
+                                        function googleTranslateElementInit() {
+                                            new google.translate.TranslateElement({
+                                                pageLanguage: 'en',
+                                                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                                            }, 'google_translate_element');
+                                        }
+                                    </script>
+                                </li>
+
+
+                                <li class="list-inline-item">
+                                    <a class="text-xs text-uppercase fw-bold text-reset"
+                                       href="#" data-bs-toggle="modal" data-bs-target="#login-modal">
+                                        <i class="fas fa-door-open me-2"></i><span class="d-none d-md-inline-block">Sign In</span>
+                                    </a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="text-xs text-uppercase fw-bold text-reset"
+                                       href="customer-register.html">
+                                        <i class="fas fa-user me-2"></i><span class="d-none d-md-inline-block">Sign Up</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="list-inline mb-0 ms-lg-4">
+                                <li class="list-inline-item text-gray-600 m-0">
+                                    <a class="text-xs social-link-hover"
+                                       href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li class="list-inline-item text-gray-600 m-0">
+                                    <a class="text-xs social-link-hover"
+                                       href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li class="list-inline-item text-gray-600 m-0">
+                                    <a class="text-xs social-link-hover"
+                                       href="#" title="Linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                </li>
+                                <li class="list-inline-item text-gray-600 m-0">
+                                    <a class="text-xs social-link-hover"
+                                       href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Top bar end-->
+        <!-- Login Modal-->
+        <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="login-modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-uppercase" id="login-modalLabel">Customer Login</h4>
+                        <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="customer-orders.html" method="get">
+                            <div class="form-group mb-3">
+                                <input class="form-control" id="email_modal" type="text" placeholder="email">
+                            </div>
+                            <div class="form-group mb-3">
+                                <input class="form-control" id="password_modal" type="password" placeholder="password">
+                            </div>
+                            <p class="text-center">
+                                <button class="btn btn-outline-primary"><i class="fas fa-door-open"></i> Log in</button>
+                            </p>
+                        </form>
+                        <p class="text-center text-muted small">Not registered yet?</p>
+                        <p class="text-center text-muted small">
+                            <a href="customer-register.html">
+                                <strong>
+                                    Register
+                                    now
+                                </strong>
+                            </a>! It is easy and done in 1 minute and gives you access to special
+                            discounts and much more!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Login modal end-->
+        <!-- Navbar Sticky-->
+        <header class="nav-holder make-sticky">
+            <div class="navbar navbar-light bg-white navbar-expand-lg py-0" id="navbar">
+                <div class="container py-3 py-lg-0 px-lg-0">
+                    <!-- Navbar brand-->
+                    <a class="navbar-brand" href="index.html">
+                        <img class="d-none d-md-inline-block"
+                             src="~/lib/img/GpacLogo.png" alt="Universal logo"><img class="d-inline-block d-md-none"
+                                                                                    src="~/lib/img/GpacLogo_xxsmall.png" alt="Universal logo"><span class="sr-only">
+                            Universal -
+                            go to
+                            homepage
+                        </span>
+
+                    </a>
+
+                    <!-- Navbar toggler-->
+                    <a class="navbar-toggler text-primary" type="button" data-bs-toggle="collapse"
+                       data-bs-target="#navigationCollapse" aria-controls="navigationCollapse" aria-expanded="false"
+                       aria-label="Toggle navigation">
+                        <span class="sr-only">Toggle navigation</span><i class="fas fa-align-justify"></i>
+                    </a>
+
+                    <!-- Collapsed Navigation    -->
+                    <div class="collapse navbar-collapse" id="navigationCollapse">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <!-- homepage dropdown-->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="hpDropdown" href="#"
+                                   role="button" data-bs-toggle="dropdown" aria-expanded="false">Home</a>
+                                <ul class="dropdown-menu" aria-labelledby="hpDropdown">
+                                    <li>
+                                        <a class="dropdown-item text-uppercase border-bottom" href="index.html">
+                                            Option 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item text-uppercase border-bottom" href="index.html">
+                                            Option 2
+                                        </a>
+                                    </li>
+
+                                    <!-- homepage submenu-->
+                                    <li class="dropdown-submenu dropend border-0 p-0">
+                                        <a class="dropdown-item text-uppercase dropdown-submenu-toggle" href="#"
+                                           role="button" aria-expanded="false">Dropdown link</a>
+                                        <ul class="dropdown-menu dropdown-submenu m-0">
+                                            <li>
+                                                <a class="dropdown-item text-uppercase border-bottom" href="">
+                                                    Action
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item text-uppercase border-bottom" href="">
+                                                    Another
+                                                    action
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- dropdown menu [contact]-->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="contactMegamenu"
+                                   href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Contact</a>
+                                <ul class="dropdown-menu dropdown-menu-end m-0" aria-labelledby="contactMegamenu">
+                                    <li>
+                                        <a class="dropdown-item text-uppercase border-bottom"
+                                           href="contact.html">Contact option 1</a>
+                                    </li>
+                            </li>
+                        </ul>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- HEADING BREADCRUMB-->
+        <section class="bg-pentagon py-4">
+            <div class="container py-3">
+                <div class="row d-flex align-items-center gy-4">
+                    <div class="col-md-7">
+                        <h1 class="h2 mb-0 text-uppercase">Prologue</h1>
+                    </div>
+                    <div class="col-md-5">
+                        <!-- Breadcrumb-->
+                        <ol class="text-sm justify-content-start justify-content-lg-end mb-0 breadcrumb undefined">
+                            <li class="breadcrumb-item"><a class="text-uppercase" href="index.html">Home</a></li>
+                            <li class="breadcrumb-item text-uppercase active">Prologue </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <div>
+            @RenderBody()
+        </div>
+
+
+        <!-- Footer Section Subscription-->
+        <div class="bg-primary py-5 text-white">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-lg-8 p-3">
+                        <h3 class="text-uppercase mb-0" style="color:white;">Subscribe to Our Newsletter.Now!</h3>
+                    </div>
+                    <div class="col-lg-4 p-3"> <a class="btn btn-outline-light" href="#">SUBSCRIBE</a></div>
+                </div>
+            </div>
+        </div>
+        <footer>
+
+            <!-- COPYRIGHTS-->
+            <div style="background-color: black;">
+                <div class="container">
+                    <div class="row align-items-cenrer gy-3 text-center">
+                        <div class="col-md-6 text-md-start">
+                            <p class="mb-0 text-sm text-gray-500">&copy; 2021. Your company / name goes here </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+
+        <!-- Cart Modal Body -->
+        <div class="cd-cart cd-cart--empty js-cd-cart">
+            <a href="#0" class="cd-cart__trigger text-replace">
+                <ul class="cd-cart__count">
+                    <!-- cart items count -->
+                    <li>0</li>
+                    <li>0</li>
+                </ul> <!-- .cd-cart__count -->
+            </a>
+
+            <div class="cd-cart__content">
+                <div class="cd-cart__layout">
+                    <header class="cd-cart__header">
+                        <h2>Cart</h2>
+                        <span class="cd-cart__undo">Item removed. <a href="#0">Undo</a></span>
+                    </header>
+
+                    <div class="cd-cart__body">
+                        <ul>
+                            <!-- products added to the cart will be inserted here using JavaScript -->
+                        </ul>
+                    </div>
+
+                    <footer class="cd-cart__footer">
+                        <a href="#0" class="cd-cart__checkout">
+                            <em>
+                                Checkout - $<span>0</span>
+                                <svg class="icon icon--sm" viewBox="0 0 24 24">
+                                    <g fill="none" stroke="currentColor">
+                                        <line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="3" y1="12"
+                                              x2="21" y2="12" />
+                                        <polyline stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                                  points="15,6 21,12 15,18 " />
+                                    </g>
+                                </svg>
+                            </em>
+                        </a>
+                    </footer>
+                </div>
+            </div> <!-- .cd-cart__content -->
+        </div>
+        <!-- End Cart Body -->
+
+    </div>
+
+
+    <!-- JavaScript files-->
+
+
+    <script src="~/lib/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/vendor/waypoints/lib/noframework.waypoints.js"></script>
+    <script src="~/lib/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/lib/vendor/choices.js/public/~/lib/scripts/choices.js"></script>
+    <script src="~/lib/js/theme.js"></script>
+
+
+    <script>
+        function injectSvgSprite(path) {
+
+            var ajax = new XMLHttpRequest();
+            ajax.open("GET", path, true);
+            ajax.send();
+            ajax.onload = function (e) {
+                var div = document.createElement("div");
+                div.className = 'd-none';
+                div.innerHTML = ajax.responseText;
+                document.body.insertBefore(div, document.body.childNodes[0]);
+            }
+        }
+        injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
+    </script>
+
+
+
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/~/lib/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    @*Google Translator*@
+    <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <!-- CartScript -->
+    <!-- util functions included in the CodyHouse framework -->
+    <script src="~/lib/cart/js/util.js"></script>
+    <script src="~/lib/cart/js/main.js"></script>
+
+</body>
+</html>
